@@ -38,8 +38,8 @@ public abstract class GameAccount
   }
 
   protected List<Games> allGames = new List<Games>();
-  public abstract void WinGame(Game typeGame, GameAccount opponent, string numberGame);
-  public abstract void LoseGame(Game typeGame, GameAccount opponent,string numberGame);
+  public abstract void WinGame(Game typeGame, GameAccount opponent);
+  public abstract void LoseGame(Game typeGame, GameAccount opponent);
 
 
   public String toString()

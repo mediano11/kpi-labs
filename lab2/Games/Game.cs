@@ -21,14 +21,14 @@ public abstract class Game {
     var result = rnd.Next(0, 2);
     if (result == 0)
     {
-      player1.WinGame(this, player2, NumberGame);
-      player2.LoseGame(this, player1, NumberGame);
+      player1.WinGame(this, player2);
+      player2.LoseGame(this, player1);
       Console.WriteLine(displayGameResult(player1, player2));
     }
     else
     {
-      player2.WinGame(this, player1, NumberGame);
-      player1.LoseGame(this, player2, NumberGame);
+      player2.WinGame(this, player1);
+      player1.LoseGame(this, player2);
       Console.WriteLine(displayGameResult(player2, player1));
     }
   }
