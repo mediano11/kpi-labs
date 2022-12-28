@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/inputs.css">
+    <title>Lab4-6</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__container">
+            <h2 class="header__title">
+                <span>Prepared by&nbsp;</span>Pestenkov Dmitriy
+            </h2>
+            <div class="header__links">
+                
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="main__container">
+            <form method="post" class="quiz-form" id="quiz-form">
+                <div class="form">
+                    <div class="form__inner">
+                        <div class="form__item">
+                            <label for="fullname">Your full name:</label>
+                            <input type="text" id="fullname" name="fullname"  placeholder="Enter your full name.." required>
+                        </div>
+                        <div class="form__item">
+                            <label for="group">Your group:</label>
+                            <select name="group" id="group" required>
+                                <option hidden>Choose your group</option>
+                                <option>TR-11</option>
+                                <option>TR-12</option>
+                                <option>TR-13</option>
+                                <option>TR-14</option>
+                                <option>TR-15</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <section class="test">
+                    <div class="test__top">
+                        <h2 class="test__title">QUIZ</h2>
+                        <h3 class="test__subscription">Test about basics JS/Canvas. <span>Good luck!</span><h3>
+                    </div>
+                    <div name="quiz" id="quiz"></div>
+                    <div name="results" id="results" value="0"></div>
+                </section>
+                <div class="share">
+                    <h3 class="share__title">Share with:</h3>
+                    <ul class="share__list">
+                        <li class="share__item">
+                          <button class="share__item-button share-button" data-post="telegram">
+                            <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <rect width="100" height="100" rx="50" fill="#2f99f8"/>
+                              <path d="M70 31.5056L62.4864 70.7307C62.4864 70.7307 61.4352 73.4503 58.5472 72.146L41.2114 58.3814L41.1311 58.3409C43.4727 56.1635 61.631 39.2567 62.4246 38.4903C63.6532 37.3034 62.8905 36.5968 61.464 37.4934L34.642 55.1324L24.2941 51.5269C24.2941 51.5269 22.6656 50.9271 22.509 49.6228C22.3503 48.3163 24.3477 47.6097 24.3477 47.6097L66.5328 30.4724C66.5328 30.4724 70 28.8948 70 31.5056Z" fill="white"/>
+                              </svg>
+                          </button>
+                        </li>
+                        <li class="share__item">
+                            <button class="share__item-button share-button" data-post="email" >
+                                <svg height="100px" width="100px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#000000" stroke="#000000" stroke-width="0">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                                <g id="SVGRepo_iconCarrier"> <g> <circle style="fill:#ECE5DD;" cx="256" cy="256" r="256"/> <circle style="fill:#ECE5DD;" cx="256" cy="256" r="256"/> </g> <path style="fill:#D9CBBD;" d="M512,256c0-71.351-29.201-135.873-76.29-182.298L289.391,189.217l-44.522,11.13L100.174,100.174 L63.026,87.791c-4.944,5.667-9.635,11.559-14.07,17.648l320.2,380.238C453.781,443.905,512,356.758,512,256z"/> <path style="fill:#AC2201;" d="M512,256c0-56.693-18.442-109.07-49.635-151.492L444.661,118.4v310.626 C486.471,383.461,512,322.715,512,256z"/> <path style="fill:#CD2900;" d="M416.127,56.273L262.325,172.605c-3.742,2.83-8.909,2.83-12.651,0L95.873,56.273 c-17.717,14.222-33.499,30.752-46.895,49.135l200.549,157.351c3.8,2.982,9.145,2.982,12.945,0l200.549-157.351 C449.626,87.024,433.844,70.496,416.127,56.273z"/> <path style="fill:#AC2201;" d="M67.339,429.026V118.4l-17.704-13.892C18.442,146.93,0,199.307,0,256 C0,322.715,25.529,383.461,67.339,429.026z"/> 
+                                </svg>
+                            </button>
+                          </li>
+                      </ul>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer class="footer"></footer>
+    <script src="js/task.js" type="module"></script>
+    <script src="js/quiz.js" type="module"></script>
+    <script src="js/httpPost.js" type="module"></script>
+</body>
+
+</html>

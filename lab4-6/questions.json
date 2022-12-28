@@ -1,0 +1,251 @@
+{
+    "questions" : 
+    [
+        {
+            "question": "Write method with one argument, which you need to use to get the 2D drawing context for drawing 2D graphics on canvas",
+            "correctAnswer": "getContext('2d')",
+            "typeQuestion": "text"
+        },
+        {
+            "question": "How do you call a function named 'myFunction'?",
+            "correctAnswer": "myFunction()",
+            "typeQuestion": "text"
+        },
+        {   
+        "question": "Which code block would allow for a color change of the outline shape or line to green.",
+        "answers": {
+            "a": "ctx.fillStyle = 'green';",
+            "b": "ctx.strokeStyle = 'green';",
+            "c": "ctx.lineStyle = 'green';",
+            "d": "ctx.fillLine = 'green';"
+        },
+        "correctAnswer": "b",
+        "typeQuestion" : "radio"
+        },
+        {
+            "question": "Which code block allows the programmer to draw various shapes and lines on to the canvas?",
+            "answers": {
+                "a": "var ctx = document.getElementById('myCanvas').getContext('2d');",
+                "b": "var c = document.getElementById('myCanvas');",
+                "c": "draw();",
+                "d": "function canvasDraw();"
+            },
+            "correctAnswer": "a",
+            "typeQuestion" : "radio"
+        },
+        {
+            "question": "What is Canvas?",
+            "answers": {
+                "a": "Canvas is a CSS property, with which you can choose the shape type.",
+                "b": "Canvas is a HTML Tag which is used to include an image within a webpage or website",
+                "c": "Canvas is an XML-based vector image format for defining two-dimensional graphics, having support for interactivity and animation",
+                "d": "Canvas in a HTML 5 element that is used to draw graphics and different types of shapes by using JavaScript."
+            },
+            "correctAnswer": "d",
+            "typeQuestion" : "radio"
+        },
+        {
+            "question": "How do you round the number 9.25, to the nearest integer?",
+            "answers": {
+                "a": "Math.rnd(9.25)",
+                "b": "round(9.25)",
+                "c": "rnd(9.25)",
+                "d": "Math.round(9.25)"
+            },
+            "correctAnswer": "d",
+            "typeQuestion" : "radio"
+        },
+        {
+            "question": "How to correctly display a greeting after 5 seconds?",
+            "answers": {
+                "a": "sleep(5); alert('Hello!'); ",
+                "b": "sleep(5000); alert('Hello!');",
+                "c": "setTimeout(function() {alert('Hello!')}, 5000);",
+                "d": "setTimeout(function() {alert('Hello!')}, 5);"
+            },
+            "correctAnswer": "c",
+            "typeQuestion" : "radio"
+        },
+        {
+            "question": "Which event occurs when the user clicks on an HTML element?",
+            "answers": {
+                "a": "onmouseover",
+                "b": "onclick",
+                "c": "onchange",
+                "d": "onmouseclick"
+            },
+            "correctAnswer": "b",
+            "typeQuestion" : "radio"
+        },
+        {
+            "question": "Is it possible to get the content of a comment from JavaScript?",
+            "answers": {
+                "a": "Yes, the comment is a DOM node, you can get it",
+                "b": "No, comments are in the HTML but not in the DOM",
+                "c": "You can get it, but only until the page is loaded",
+                "d": "Yes, you can do it with getComment() method"
+            },
+            "correctAnswer": "a",
+            "typeQuestion" : "radio"
+        },
+        {
+            "question": "Which event from this list does NOT exist?",
+            "answers": {
+                "a": "onwheel",
+                "b": "onclick",
+                "c": "onmousescroll",
+                "d": "onmousemove"
+            },
+            "correctAnswer": "c",
+            "typeQuestion" : "radio"
+        },
+        {
+            "question": "How to apply strict mode in JavaScript?",
+            "answers": {
+                "a": "“strict mode”",
+                "b": "“use strict”",
+                "c": "“apply strict”",
+                "d": "“strict”"
+            },
+            "correctAnswer": "b",
+            "typeQuestion" : "radio"
+        },
+        {
+            "question": "Java Script entities start with _____ and end with _____.",
+            "answers": {
+                "a": "dash, semicolon",
+                "b": "ampersand, colon",
+                "c": "semicolon, dash",
+                "d": "ampersand, semicolon"
+            },
+            "correctAnswer": "d",
+            "typeQuestion" : "radio"
+        },
+        {
+            "question" : "How to work with rectangles inside canvas?",
+            "answers": {
+                "a": "fillRect",
+                "b": "lineRect",
+                "c": "moveRect",
+                "d": "strokeRect",
+                "e": "clearRect"
+            } ,
+            "correctAnswer": ["a", "d", "e"],
+            "typeQuestion" : "checkbox"
+        },
+        {
+            "question" : "Where is the correct place to insert a JavaScript?",
+            "answers": {
+                "a": "The body section",
+                "b": "The head section",
+                "c": "The header section"
+            },
+            "correctAnswer": ["a", "b"],
+            "typeQuestion" : "checkbox"
+        },
+        {
+            "question" : "Which events from this list will occur when you press and release the Shift key? Other keys are not pressed.",
+            "answers": {
+                "a": "keydown",
+                "b": "keyup",
+                "c": "keypress",
+                "d": "keyrelease"
+            },
+            "correctAnswer": ["a", "c"],
+            "typeQuestion" : "checkbox"
+        },
+        {
+            "question" : "Which of these element properties can point to a text node?",
+            "answers": {
+                "a": "firstChild",
+                "b": "nextSibling",
+                "c": "parentNode",
+                "d": "parentElement"
+            },
+            "correctAnswer": ["a", "c", "d"],
+            "typeQuestion" : "checkbox"
+        },
+        {
+            "question" : "What is the difference between fillRect and strokeRect?",
+            "tasks":[
+                {
+                    "sentence": "fillRect let us draw a rectangle which is ",
+                    "answers": [
+                        "filled",
+                        "empty but with only outline"
+                    ],
+                    "correctAnswer": "filled"
+                },
+                {
+                    "sentence": "strokeRect let us draw a rectangle ",
+                    "answers": [
+                        "that is completely filled",
+                        "with only outline"      
+                    ],
+                    "correctAnswer": "with only outline"
+                }
+            ],
+
+            "typeQuestion" : "list"
+        },
+        {
+            "question" : "What is the difference between confirm and prompt dialog box?",
+            "tasks":[
+                {
+                    "sentence": "confirm(): Display a popup box with ",
+                    "answers": [
+                        "a question and two buttons: OK and Cancel",
+                        "the specified message and waits for the user to press OK. ",
+                        "a text message, an input field for the visitor, and the buttons OK/Cancel" 
+                    ],
+                    "correctAnswer": "a question and two buttons: OK and Cancel"
+                },
+                {
+                    "sentence": "prompt(): Display a popup box with ",
+                    "answers": [
+                        "a question and two buttons: OK and Cancel",
+                        "the specified message and waits for the user to press 'OK'. ",
+                        "a text message, an input field for the visitor, and the buttons OK/Cancel" 
+                    ],
+                    "correctAnswer": "a text message, an input field for the visitor, and the buttons OK/Cancel"
+                }
+            ],
+
+            "typeQuestion" : "list"
+        },
+        {
+            "question" : "Match definition and meaning",
+            "definitions" : [
+                "undefined", "null", "Object"
+            ],
+            "answers": [
+                "Represents the intentional absence of any object value",
+                "A data type whose variable is not initialized",
+                "Data type which contain key-value pairs of collection of data"
+            ],
+            "correctAnswers": {
+                "undefined": "A data type whose variable is not initialized",
+                "null": "Represents the intentional absence of any object value",
+                "Object": "Data type which contain key-value pairs of collection of data"
+            },
+            "typeQuestion" : "match"
+        },
+        {
+            "question" : "Match definition and meaning",
+            "definitions" : [
+                "Symbol", "String", "Boolean"
+            ],
+            "answers": [
+                "Data type whose instances are unique and immutable",
+                "Primitive data types that have one of two possible values. This values are usually used for conditional operations",
+                "Data type which represents textual data"
+            ],
+            "correctAnswers": {
+                "Symbol": "Data type whose instances are unique and immutable",
+                "String": "Data type which represents textual data",
+                "Boolean": "Primitive data types that have one of two possible values. This values are usually used for conditional operations"
+            },
+            "typeQuestion" : "match"
+        }
+    ]
+}

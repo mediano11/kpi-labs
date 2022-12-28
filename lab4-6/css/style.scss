@@ -1,0 +1,252 @@
+
+*, *::before, *::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    background-color: teal;
+}
+[class*="__container"]{
+    width: 980px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.error{
+    font-weight: 700;
+    color: red;
+}
+
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    background-color: #fff;
+    border: 2px solid #000;
+    color: #000;
+
+    padding: 4px 17px;
+    font-size: inherit;
+
+    transition: all .3s;
+    user-select: none;
+    cursor: pointer;
+}
+
+.btn:focus {
+  color: #171e29;
+}
+
+.btn:hover {
+  border-color: coral;
+  color: coral;
+}
+
+.btn:active {
+  border-color: coral;
+  color: coral;
+}
+
+.header{
+    background: linear-gradient(to top, teal, #7a2ff830);
+    &__container{ 
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        padding: 10px;
+    }
+    &__title{
+        display: flex;
+        align-items: center;
+        font-size: 25px;
+        line-height: 34px;
+        & span{
+            color: coral;
+            white-space: pre-line;
+        }
+    }
+}
+
+.footer{
+    height: 10px;
+    background: linear-gradient(to bottom, teal, #7a2ff830);
+}
+
+
+
+.form{
+    display: grid;
+    height: 90vh;
+    place-items: center;
+    &__inner{
+        width: 50%;
+    }
+    &__item{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    &__item label{
+        font-size: 22px;
+        line-height: 34px;
+        font-weight: 700;
+    }
+    &__buttons{
+        display: flex;
+        width: 100%;
+    }
+    &__btn{
+        flex: 1 0 50%;
+    }
+}
+
+.test{
+    padding: 50px 0;
+    &__top{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 25px;
+    }
+    &__title{
+        font-size: 60px;
+        line-height: 72px;
+    }
+    &__subscription{
+        font-size: 35px;
+        line-height: 42px;
+        font-weight: 600;
+    }
+    &__subscription span{
+        color: coral;
+    }
+}
+
+
+.answers{
+    &__main{
+        display: flex;
+        gap: 40px;
+    }
+    &__meanings{
+        flex: 0 0 50%;
+        list-style-type: none;
+    }
+    &__definitions{
+        list-style-type: decimal;
+        padding-left: 35px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    
+    &__cell, &__card{
+        min-height: 50px ;
+        padding: 10px 20px;
+        box-shadow: 0px 0px 7px 5px rgba(0,0,0,0.2);
+        background: #f0f2f5;
+        overflow: hidden;
+    }
+    &__cell:not(:last-child), &__card:not(:last-child){
+        margin-bottom: 10px;
+    }
+    &__card{
+        display: flex;
+        align-items:center;
+        cursor: all-scroll;
+    }
+    &__item{
+        position: relative;
+        min-height: 30px;
+        padding-left: 35px;
+        margin-bottom: 10px;
+        list-style: lower-alpha;
+    }
+    &__box{
+        margin-top: 20px;
+    }
+}
+
+.quiz{
+    &__question{
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 15px;
+    }
+    &__answers label{
+        font-size: 18px;
+        line-height: 27px;
+    }
+    &__task{
+        background: #fffdfde6;
+        border-radius: 10px;
+        padding: 15px;
+        margin-bottom: 10px;
+    }
+    &__subtask{
+        margin-bottom: 10px;
+    }
+    &__btn{
+        display: flex;
+        border-radius: 10px;
+        margin: 0 auto;
+    }
+}
+
+#results{
+    display: none;
+    width: fit-content;
+    margin: 10px auto;
+    padding: 15px;
+
+    background: #fffdfde6;
+    border-radius: 10px;
+
+    font-size: 27px;
+    line-height: 38px;
+    font-weight: 700;
+    color: coral;
+}
+.share {
+    display: none;
+    flex-direction: column;
+    align-items:center;
+    &__title{
+        color: coral;
+        font-size: 35px;
+    }
+    &__list{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-around;
+        gap: 50px;
+    }
+    &__item{
+        list-style-type: none;
+    }
+    &__item-button{
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    &__item-button svg{
+      transition: transform 0.2s ease-in-out;
+    }  
+   
+    &__item-button:hover  svg{
+        transition: transform 0.2s ease-in-out;
+        transform: scale(1.12);
+    }
+  }
+  

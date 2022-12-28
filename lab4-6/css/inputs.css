@@ -1,0 +1,151 @@
+input[type=reset], input[type=submit]{
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+/* radio */
+input[type=radio] {
+    -webkit-appearance: none;
+    appearance: none;
+    position: absolute;
+}
+
+.radio__label {
+    cursor: pointer;
+}
+
+.radio__label:before {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    transition: border .1s linear;
+}
+
+.radio__label:after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+
+    background-color: #49d120;
+    border-radius: 50%;
+    opacity: 0;
+
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: 2;
+
+    transition: opacity .1s linear;
+}
+
+input[type=radio]:checked + .radio__label:before {
+    border-color: #319612;
+}
+
+input[type=radio]:checked + .radio__label:after {
+    opacity: 1;
+}
+
+/* checkbox */
+input[type=checkbox]{
+    -webkit-appearance: none;
+    appearance: none;
+    position: absolute;
+}
+
+.checkbox__label {
+    cursor: pointer;
+}
+
+.checkbox__label:before {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 3px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    transition: background .1s linear, border .1s linear;
+}
+
+.checkbox__label:after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+
+    background: url("../assets/check.svg") no-repeat;
+    background-size: 20px 20px;
+    opacity: 0;
+
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    z-index: 2;
+
+    transition: opacity .1s linear;
+}
+
+input[type=checkbox]:checked + .checkbox__label:before {
+    background-color: #49d120;
+    border-color: #319612;
+}
+
+input[type=checkbox]:checked + .checkbox__label:after {
+    opacity: 1;
+}
+
+/* text */
+
+input[type=text]{
+    padding: 10px 20px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    border-width: 2px;
+    font-family: inherit;
+    font-size: 18px;
+}
+input[type=text]:focus{
+    outline: none;
+    border-color: coral;
+}
+
+input[type=text]::placeholder{
+    font-size: 18px;
+    font-weight: 300;
+}
+
+/* select */
+select {
+    padding: 10px 20px 10px 10px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-family: inherit;
+    font-size: 18px;
+}
+
+select:focus {
+    outline: 0;
+    border-color: coral;
+}
