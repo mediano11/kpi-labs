@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Shop.Basket">
+    <Position X="5.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAMABAAAAAAgCAAAAQAAwQAAAAAAAAAAAgAAAAAACAA=</HashCode>
+      <FileName>Models\Basket\Basket.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shop.BasketItem">
+    <Position X="7.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAACAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAEAACAAAA=</HashCode>
+      <FileName>Models\Basket\BasketItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shop.Bicycle">
+    <Position X="4.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EhAAAAAAAAAAAAAAAAAABAAAAAACAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Models\Products\Bicycle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shop.Car">
+    <Position X="2.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAQAAAAAAAIAAEBAAAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Models\Products\Car.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shop.Motorcycle">
+    <Position X="0.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAgAAAAAAAAAAAABAAAAAAAAAAAAAAAAAiAAAA=</HashCode>
+      <FileName>Models\Products\Motorcycle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shop.Product">
+    <Position X="2.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAAAhAAAAAAAAAAAAAAAAACIAAA=</HashCode>
+      <FileName>Models\Products\Product.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shop.History" Collapsed="true">
+    <Position X="10" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAgAAAEAAAAQABAAAAAAAAAAA=</HashCode>
+      <FileName>Models\History\History.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shop.HistoryItem" Collapsed="true">
+    <Position X="10" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAABAAAAAAAgAAAAAAAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Models\History\HistoryItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shop.User">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAgAAAAAAAAAAAACAAAAACAQAAAAAAgAA=</HashCode>
+      <FileName>Models\Users\User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shop.BasketService" Collapsed="true">
+    <Position X="7" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAACAAAAAAAAAABAAAAAAAAEAAAAAAAAACAAA=</HashCode>
+      <FileName>Services\BasketService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Shop.HistoryService" Collapsed="true">
+    <Position X="7.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAACAAAAAAAAAABAAAAAAAAEAAAAAAAAACAAA=</HashCode>
+      <FileName>Services\HistoryService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Shop.ProductService" Collapsed="true">
+    <Position X="9" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAACAAAAAAAAAABAAAAAAAAEAAAAAAAAACAAA=</HashCode>
+      <FileName>Services\ProductService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Shop.UserService" Collapsed="true">
+    <Position X="8" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAACAAAAAAAAAABAAAAAAAAEAAAAAAAAACEAA=</HashCode>
+      <FileName>Services\UserService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Shop.ShopMenuController">
+    <Position X="13.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAQAAAAAAEAAAAAAAAIAAAEAQ=</HashCode>
+      <FileName>UI\ShopMenu\ShopMenuController.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Shop.MainMenuController">
+    <Position X="15" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAIAAAEAQ=</HashCode>
+      <FileName>UI\MainMenu\MainMenuController.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="Shop.IService&lt;T&gt;" Collapsed="true">
+    <Position X="6.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAABAAAAAAAAEAAAAAAAAACAAA=</HashCode>
+      <FileName>Services\Base\IService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
