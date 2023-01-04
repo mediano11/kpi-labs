@@ -35,8 +35,6 @@ namespace Shop
                     UIs[action - 1].Action();
                 }
             }
-           
-
         }
         private void Show()
         {

@@ -20,7 +20,7 @@ namespace Shop
         private void Show()
         {
             Console.Clear();
-            Console.WriteLine("\t\tWelcome to the Vehicle shop");
+            Console.WriteLine("\t\t  Welcome to the Vehicle shop");
             for (int i = 0; i < UIs.Count; i++)
             {
                 Console.WriteLine(i+1 + ". " + UIs[i].Message());

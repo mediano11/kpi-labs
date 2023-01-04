@@ -19,7 +19,7 @@ namespace Shop
         {
             Console.Clear();
             Console.WriteLine($"Your budget is {User.Budget:C2}");
-            int amount = Utility.GetValidInput("the deposit amount", 0, 1000000);
+            int amount = Utility.GetValidInput("the deposit amount (max = 1.000.000$)", 0, 1000000);
             User.Budget += amount;
             Console.WriteLine($"The money has been successfully deposited. Your current balance is {User.Budget:C2}");
             Console.ReadKey();

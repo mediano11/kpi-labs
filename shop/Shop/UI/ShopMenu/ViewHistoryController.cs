@@ -23,11 +23,7 @@ namespace Shop
             var history = HistoryService.SelectById(User.ID);
             if (history.Count > 0)
             {
-                foreach (var purchase in history)
-                {
-                    Console.WriteLine($"History ID: {purchase.HistoryID}. Date: {purchase.Date}");
-                    Utility.PrintHistoryTable(purchase.HistoryItems);
-                }
+                Utility.PrintHistory(history);
             } else
             {
                 Console.WriteLine($"{User.UserName}, your shopping history is empty! Buy something to fill it.");

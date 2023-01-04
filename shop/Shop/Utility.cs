@@ -59,12 +59,12 @@ namespace Shop
         public static void PrintProductTable(List<Product> productList)
         {
             var output = new StringBuilder();
-            output.AppendLine("-----------------------------------------------------");
-            output.AppendLine(String.Format("| {0,-12}| {1,-20}| {2,-14}|", "Product ID", "Product name", "Product price"));
-            output.AppendLine("-----------------------------------------------------");
+            output.AppendLine("---------------------------------------------------------------------");
+            output.AppendLine(String.Format("| {0,-12}| {1,-14}| {2,-20}| {3,-14}|", "Product ID", "Product type", "Product name", "Product price"));
+            output.AppendLine("---------------------------------------------------------------------");
             foreach (var item in productList)
                 output.AppendLine(item.toRow());
-            output.AppendLine("-----------------------------------------------------");
+            output.AppendLine("---------------------------------------------------------------------");
             Console.Write(output);
         }
 
@@ -92,6 +92,14 @@ namespace Shop
             }
             output.AppendLine("-----------------------------------------------");
             Console.Write(output);
+        }
+        public static void PrintHistory(List<History> history)
+        {
+            foreach (var purchase in history)
+            {
+                Console.WriteLine($"History ID: {purchase.HistoryID}. Date: {purchase.Date}");
+                PrintHistoryTable(purchase.HistoryItems);
+            }
         }
     }
 }

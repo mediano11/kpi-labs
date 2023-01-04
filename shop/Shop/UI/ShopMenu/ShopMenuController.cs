@@ -37,7 +37,7 @@ namespace Shop
             }
 
         }
-        public void Show()
+        private void Show()
         {
             
             Console.Clear();
