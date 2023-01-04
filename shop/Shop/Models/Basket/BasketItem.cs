@@ -8,7 +8,7 @@ namespace Shop
 {
 	public class BasketItem
 	{
-		public virtual Product Product { get; set; }
+		public Product Product { get; set; }
 		public int ProductID { get; set; }
 		public DateTime DateCreated { get; set; }
 		public int CustomerID { get; set; }

@@ -50,8 +50,8 @@ namespace Shop
 		public decimal GetTotal()
 		{
 			decimal? total = decimal.Zero;
-			total = (decimal?)(from basketItems in BasketService.SelectById(Customer.ID)
-			select basketItems.Product.ProductPrice).Sum();
+			total = (decimal?)(from basketItems in CustomerBasket()
+							   select basketItems.Product.ProductPrice).Sum();
 			return total ?? decimal.Zero;
 		}
 		public void Buy()
@@ -59,14 +59,14 @@ namespace Shop
 			if (Customer.Budget > GetTotal())
 			{
 				// clear shop
-				if(ProductService.SelectAll().Any(el=>BasketService.SelectById(Customer.ID).Any(x => x.ProductID == el.ProductID)))
+				if(ProductService.SelectAll().Any(el=> CustomerBasket().Any(x => x.ProductID == el.ProductID)))
 				{
-					ProductService.SelectAll().RemoveAll(el => BasketService.SelectById(Customer.ID).Any(x => x.ProductID == el.ProductID));
+					ProductService.SelectAll().RemoveAll(el => CustomerBasket().Any(x => x.ProductID == el.ProductID));
 				}
 				else
                 {
 					Console.WriteLine("Unfortunately, the product is no longer in stock");
-					BasketService.SelectAll().RemoveAll(el => BasketService.SelectById(Customer.ID).Any(x => x.CustomerID == el.CustomerID));
+					BasketService.SelectAll().RemoveAll(el => CustomerBasket().Any(x => x.CustomerID == el.CustomerID));
 					return;
 					
                 }
@@ -75,11 +75,11 @@ namespace Shop
 
 				// add history
 				List<HistoryItem> history = new List<HistoryItem> { };
-				BasketService.SelectById(Customer.ID).ForEach(el => history.Add(new HistoryItem(el.Product.ProductID, el.Product.ProductName, el.Product.ProductPrice)));
+				CustomerBasket().ForEach(el => history.Add(new HistoryItem(el.Product.ProductID, el.Product.ProductName, el.Product.ProductPrice)));
 				HistoryService.Create(new History(Customer.ID,history, DateTime.Now));
 
 				// clear basket
-				BasketService.SelectAll().RemoveAll(el => BasketService.SelectById(Customer.ID).Any(x => x.CustomerID == el.CustomerID));
+				BasketService.SelectAll().RemoveAll(el => CustomerBasket().Any(x => x.CustomerID == el.CustomerID));
 				Console.WriteLine("Purchase completed successfully");
 			} else
 			{
@@ -88,7 +88,7 @@ namespace Shop
 		}
 		public void RemoveFromBasket(int id)
 		{
-			var basketItem = BasketService.SelectById(Customer.ID).SingleOrDefault(x => x.ProductID == id);
+			var basketItem = CustomerBasket().SingleOrDefault(x => x.ProductID == id);
 			if (basketItem == null)
 			{
 				Console.WriteLine("Item not in the basket!");
@@ -103,12 +103,17 @@ namespace Shop
 		public void Display()
         {
 			Console.WriteLine($"{Customer.UserName}'s basket:");
-			Utility.PrintBasketTable(BasketService.SelectById(Customer.ID));
+			Utility.PrintBasketTable(CustomerBasket());
 			Console.WriteLine($"Total sum: {GetTotal():C2}");
 		}
 		public int BasketSize()
         {
-			return BasketService.SelectById(Customer.ID).Count;
+			return CustomerBasket().Count;
         }
+		public List<BasketItem> CustomerBasket()
+        {
+			return BasketService.SelectById(Customer.ID);
+
+		}
 	}
 }
