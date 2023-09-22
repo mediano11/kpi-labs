@@ -1,0 +1,24 @@
+//colors
+$mainColor: #666666;
+$blueColor: #1A56D6;
+$greyColor: #4D4D4D;
+
+//fonts
+@import url("https://fonts.googleapis.com/css?family=PT+Serif:regular,700,700italic&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:regular,500,700&display=swap");
+
+$fontFamily : "PT Serif";
+$fontSize: 16;
+
+// width
+$minWidth: 290;
+$maxWidth: 1920;
+$maxWidthContainer: 1170;
+$containerPadding: 30; // 15 + 15
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+%secondary-title{
+  font-size: 30px;
+  line-height: 36px;
+  color: $greyColor;
+}
