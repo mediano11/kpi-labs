@@ -1,0 +1,4 @@
+.vscode
+.env
+*.docx
+node_modules/

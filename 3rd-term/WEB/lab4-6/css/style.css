@@ -1,0 +1,238 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  background-color: teal;
+}
+
+[class*=__container] {
+  width: 980px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.error {
+  font-weight: 700;
+  color: red;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #fff;
+  border: 2px solid #000;
+  color: #000;
+  padding: 4px 17px;
+  font-size: inherit;
+  transition: all 0.3s;
+  user-select: none;
+  cursor: pointer;
+}
+
+.btn:focus {
+  color: #171e29;
+}
+
+.btn:hover {
+  border-color: coral;
+  color: coral;
+}
+
+.btn:active {
+  border-color: coral;
+  color: coral;
+}
+
+.header {
+  background: linear-gradient(to top, teal, rgba(122, 47, 248, 0.1882352941));
+}
+.header__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.header__title {
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+  line-height: 34px;
+}
+.header__title span {
+  color: coral;
+  white-space: pre-line;
+}
+
+.footer {
+  height: 10px;
+  background: linear-gradient(to bottom, teal, rgba(122, 47, 248, 0.1882352941));
+}
+
+.form {
+  display: grid;
+  height: 90vh;
+  place-items: center;
+}
+.form__inner {
+  width: 50%;
+}
+.form__item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.form__item label {
+  font-size: 22px;
+  line-height: 34px;
+  font-weight: 700;
+}
+.form__buttons {
+  display: flex;
+  width: 100%;
+}
+.form__btn {
+  flex: 1 0 50%;
+}
+
+.test {
+  padding: 50px 0;
+}
+.test__top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+}
+.test__title {
+  font-size: 60px;
+  line-height: 72px;
+}
+.test__subscription {
+  font-size: 35px;
+  line-height: 42px;
+  font-weight: 600;
+}
+.test__subscription span {
+  color: coral;
+}
+
+.answers__main {
+  display: flex;
+  gap: 40px;
+}
+.answers__meanings {
+  flex: 0 0 50%;
+  list-style-type: none;
+}
+.answers__definitions {
+  list-style-type: decimal;
+  padding-left: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.answers__cell, .answers__card {
+  min-height: 50px;
+  padding: 10px 20px;
+  box-shadow: 0px 0px 7px 5px rgba(0, 0, 0, 0.2);
+  background: #f0f2f5;
+  overflow: hidden;
+}
+.answers__cell:not(:last-child), .answers__card:not(:last-child) {
+  margin-bottom: 10px;
+}
+.answers__card {
+  display: flex;
+  align-items: center;
+  cursor: all-scroll;
+}
+.answers__item {
+  position: relative;
+  min-height: 30px;
+  padding-left: 35px;
+  margin-bottom: 10px;
+  list-style: lower-alpha;
+}
+.answers__box {
+  margin-top: 20px;
+}
+
+.quiz__question {
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 15px;
+}
+.quiz__answers label {
+  font-size: 18px;
+  line-height: 27px;
+}
+.quiz__task {
+  background: rgba(255, 253, 253, 0.9019607843);
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 10px;
+}
+.quiz__subtask {
+  margin-bottom: 10px;
+}
+.quiz__btn {
+  display: flex;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
+#results {
+  display: none;
+  width: fit-content;
+  margin: 10px auto;
+  padding: 15px;
+  background: rgba(255, 253, 253, 0.9019607843);
+  border-radius: 10px;
+  font-size: 27px;
+  line-height: 38px;
+  font-weight: 700;
+  color: coral;
+}
+
+.share {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+.share__title {
+  color: coral;
+  font-size: 35px;
+}
+.share__list {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+  gap: 50px;
+}
+.share__item {
+  list-style-type: none;
+}
+.share__item-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.share__item-button svg {
+  transition: transform 0.2s ease-in-out;
+}
+.share__item-button:hover svg {
+  transition: transform 0.2s ease-in-out;
+  transform: scale(1.12);
+}
+
+/*# sourceMappingURL=style.css.map */

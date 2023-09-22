@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Lab2</title>
+</head>
+<body id="top">
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <h1 class="header__title">Лабораторна робота №2. Виконавець: Пестенков Дмітрій, ТР-14</h1>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <section class="info">
+            <div class="container">
+                <div class="info__content">
+                    <div class="info__content-left">
+                        <img class="info__img left-img" src="image/audi1.jpg" alt="audi">
+                        <p class="info__text"><strong>Audi AG</strong> <em>Aktiengesellschaft</em>, commonly referred to as <strong>Audi</strong>, is a German <i>automotive manufacturer</i> of <i>luxury vehicles</i> headquartered in <i>Ingolstadt, Bavaria, Germany</i>. As a subsidiary of its parent company, the <em>Volkswagen Group</em>, Audi produces vehicles in nine production facilities worldwide.</p>
+                        <img class="info__img right-img" src="image/audi2.jpg" alt="audi">
+                        <p class="info__text">The origins of the company are complex, going back to the early 20th century and the initial enterprises (Horch and the Audiwerke) founded by engineer <i>August Horch</i> (1868–1951); and two other manufacturers (DKW and Wanderer), leading to the foundation of <i>Auto Union</i> in 1932.</p>
+                        <img class="info__img bottom-img" src="image/audi3.jpg" alt="audi">
+                    </div>
+                    <div class="info__content-right">
+                        <img class="info__img first-img" src="image/space.jpg" alt="space">
+                        <img class="info__img second-img" src="image/space.jpg" alt="space">
+                        <img class="info__img third-img" src="image/space.jpg" alt="space">
+                    </div>
+                </div>
+                <div class="links">
+                  <ul class="links__list">
+                    <li class="links__item">
+                      <a class="links__item-link" href="#registration__form">Форма реєстрації</a>
+                    </li>
+                    <li class="links__item">
+                      <a class="links__item-link" href="#enter__form">Форма входу</a>
+                    </li>
+                    <li class="links__item">
+                      <a class="links__item-link" href="#feedback">Форма зворотнього зв'язку</a>
+                    </li>
+                  </ul>
+                </div>
+            </div>
+        </section>    
+        <section class="registration__form" id="registration__form">
+          <div class="container">
+            <div class="registration__inner">
+              <h1 class="title">Форма реєстрації</h1>
+              <form class="form">
+                <div class="form__content">
+                  <div class="form__left-side">
+                    <div class="form__block"><img src="image/unknown.png" alt="unknown"></div>
+                    <div class="form__block">
+                      <label for="name">Ім'я</label><input id="name" placeholder="Ім'я" type="text" required>
+                    </div>
+                    <div class="form__block">
+                      <label for="surname">Прізвище</label><input id="surname" placeholder="Прізвище" type="text" required>
+                    </div>
+                    <div class="form__block">
+                      <span>Стать</span>
+                      <div class="form__genders">
+                        <div class="form__block row">
+                          <input id="gender1" type="radio" name="gender" required><label for="gender1">Чоловік</label>
+                        </div>
+                        <div class="form__block row">
+                          <input id="gender2" type="radio" name="gender" required><label for="gender2">Жінка</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form__block row">
+                      <label for="age">Вік</label><input id="age" type="number" name="age" value="18" min="1" max="120"
+                        required>
+                    </div>
+                    <div class="form__block row">
+                      <label for="birthday">Дата народження</label><input id="birthday" type="date" name="birthday" required
+                        value="2004-10-01" min="1902-01-01" max="2022-12-31">
+                    </div>
+                  </div>
+                  <div class="form__right-side">
+                    <div class="form__block">
+                      <label>Країна проживання</label><input placeholder="Оберіть країну проживання" list="countries" required>
+                      <datalist id="countries">
+                        <option value="Ukraine"></option>
+                        <option value="Poland"></option>
+                        <option value="USA"></option>
+                        <option value="Sweden"></option>
+                        <option value="Finland"></option>
+                      </datalist>
+                    </div>
+                    <div class="form__block">
+                      <label for="tel">Номер телефону</label><input id="tel" type="tel" placeholder="+38(0XX)XXX-XX-XX"
+                        pattern="(\+38)\(?\d{3}\)?[\s\.-]?(\d{7}|\d{3}[\s\.-]\d{2}[\s\.-]\d{2}|\d{3}-\d{4})" required>
+                    </div>
+                    <div class="form__block">
+                      <label for="url">Cоцмережа</label><input type="url" name="url" id="url"
+                        placeholder="Посилання на соц. мережу" pattern="https://.*" required>
+                    </div>
+                    <div class="form__block">
+                      <label for="email">Електронна пошта</label><input type="email" id="email" placeholder="Ел. пошта"
+                        pattern="[\w-\.]+@([\w-]+\.)+[\w-]{2,4}" required>
+                    </div>
+                    <div class="form__block">
+                      <label for="userPassword">Пароль</label><input id="userPassword" type="text" placeholder="Пароль"
+                        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                        title="Пароль не може бути меншим за вісім символів і має містити хоча б одну цифру, одну маленьку та одну велику латинську літеру."
+                        required>
+                    </div>
+                    <div class="form__block row">
+                      <input id="term" type="checkbox" required><label for="term">Чи згідні ви з умовами?</label>
+                    </div>
+        
+                  </div>
+                </div>
+                <div class="form__buttons">
+                  <button class="form__button" type="submit">Зареєструватися</button>
+                  <button class="form__button" type="reset">Відміна</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+        <section class="enter__form" id="enter__form">
+          <div class="enter__container">
+            <div class="enter__content">
+              <h1 class="title">Форма входу:</h1>
+              <form class="form">
+                <div class="form__content-enter">
+                  <input type="text" name="login" placeholder="Логін" required>
+                  <input type="password" name="userPassword" placeholder="Пароль" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                    title="Пароль не може бути меншим за вісім символів і має містити хоча б одну цифру, одну маленьку та одну велику латинську літеру."
+                    required>
+                </div>
+                <div class="form__block">
+                  <button class="form__button" type="submit">Вхід
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+        <section class="feedback" id="feedback">
+          <div class="container">
+            <div class="feedback__inner">
+              <h1 class="title">Форма зворотнього зв'язку</h1>
+              <form class="form">
+                <div class="form__content">
+                  <div class="form__left-side">
+                    <div class="form__block">
+                      <input id="name" placeholder="Ім'я" type="text" required>
+                    </div>
+                    <div class="form__block">
+                      <input type="email" id="email" placeholder="Ел. пошта" pattern="[\w-\.]+@([\w-]+\.)+[\w-]{2,4}"
+                        size="30" required>
+                    </div>
+                    <div class="form__block">
+                      <input placeholder="Тема повідомлення" list="topic" required>
+                      <datalist id="topic">
+                        <option value="Скарга"></option>
+                        <option value="Похвала"></option>
+                        <option value="Пропозиція"></option>
+                        <option value="Інше"></option>
+                      </datalist>
+                    </div>
+                    <div class="form__block">
+                      <button class="form__button">Відправити</button>
+                    </div>
+                  </div>
+                  <div class="form__right-side">
+                    <textarea class="form__textarea" placeholder="Повідомлення" required></textarea>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+    </main>
+    <footer class="footer">
+      <div class="social">
+        <div class="container">
+          <ul class="social__list">
+            <li class="social__item">
+              <a href="https://www.instagram.com/" target="_blank" class="social__item-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" viewBox="0 0 16 16">
+                  <path
+                    d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="https://github.com/" target="_blank" class="social__item-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24">
+                  <path
+                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="https://web.telegram.org/" target="_blank" class="social__item-link">
+                <svg width="50px" height="50px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                  style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+                  <path
+                    d="M12,0c-6.626,0 -12,5.372 -12,12c0,6.627 5.374,12 12,12c6.627,0 12,-5.373 12,-12c0,-6.628 -5.373,-12 -12,-12Zm3.224,17.871c0.188,0.133 0.43,0.166 0.646,0.085c0.215,-0.082 0.374,-0.267 0.422,-0.491c0.507,-2.382 1.737,-8.412 2.198,-10.578c0.035,-0.164 -0.023,-0.334 -0.151,-0.443c-0.129,-0.109 -0.307,-0.14 -0.465,-0.082c-2.446,0.906 -9.979,3.732 -13.058,4.871c-0.195,0.073 -0.322,0.26 -0.316,0.467c0.007,0.206 0.146,0.385 0.346,0.445c1.381,0.413 3.193,0.988 3.193,0.988c0,0 0.847,2.558 1.288,3.858c0.056,0.164 0.184,0.292 0.352,0.336c0.169,0.044 0.348,-0.002 0.474,-0.121c0.709,-0.669 1.805,-1.704 1.805,-1.704c0,0 2.084,1.527 3.266,2.369Zm-6.423,-5.062l0.98,3.231l0.218,-2.046c0,0 3.783,-3.413 5.941,-5.358c0.063,-0.057 0.071,-0.153 0.019,-0.22c-0.052,-0.067 -0.148,-0.083 -0.219,-0.037c-2.5,1.596 -6.939,4.43 -6.939,4.43Z" />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <div class="arrow-up">
+      <a class="arrow-up-link" href="#top" >
+        <img class="arrow" src="image/arrow.png" alt="arrow-up">
+      </a>
+    </div>
+</body>
+</html>
